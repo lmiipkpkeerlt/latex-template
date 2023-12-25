@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage{biblatex}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\addbibresource{references.bib}
+
+\lstset{
+  basicstyle=\ttfamily,
+  breaklines=true,
+  numbers=left,
+  frame=l,
+}
+
+\title{
+  \rule{\textwidth}{0.5pt}\\[4mm]
+  \huge{\textbf{TITLE}}\\[2mm]
+  \large{SUBJECT}\\[4mm]
+  \small{\textit{IT University of Copenhagen}}\\
+  \rule{\textwidth}{0.5pt}\\
+}
+
+\author{AUTHOR \texttt{author@mail.com}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+\tableofcontents
+\setcounter{page}{1}
+\clearpage
+
+\begin{sloppypar}
+\onehalfspacing
+\input{tex/introduction.tex}
+%\input{tex/related-literature.tex}
+%\input{tex/dataset.tex}
+%\input{tex/methods.tex}
+%\input{tex/results.tex}
+%\input{tex/discussion.tex}
+%\input{tex/conclusion.tex}
+\end{sloppypar}
+
+\printbibliography[title=References]
+\addcontentsline{toc}{section}{References}
+\clearpage
+
+%\appendix
+%\input{appendix/...}
+
+\end{document}
